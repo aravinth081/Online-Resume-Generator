@@ -1,38 +1,46 @@
-# 📄 Online Resume Generator
+  # Online Resume Generator
 
 A **professional, ATS-friendly online resume generator** built using **HTML, CSS, and JavaScript**.  
-Users can easily create a clean, modern resume, preview it live, and **download it as a single-page A4 PDF**.
+This application allows users to create a clean, modern resume, preview it in real time, and **download it as a single-page A4 PDF**.
 
 ---
 
-## ✨ Features
+## Overview
 
-- ✅ Professional MNC-style resume layout  
-- ✅ Live resume preview  
-- ✅ One-click PDF download (A4 – single page)  
-- ✅ Fresher & experienced resume support  
-- ✅ Auto career objective (`You write`)  
-- ✅ Fully client-side (no backend required)  
-- ✅ Clean UI & easy customization  
+The Online Resume Generator is a front-end web application designed for students, freshers, and professionals.  
+It follows modern resume standards used by MNCs and ensures compatibility with Applicant Tracking Systems (ATS).
 
 ---
 
-## 🛠️ Technologies Used
+## Features
 
-- **HTML5** – Page structure  
-- **CSS3** – Professional styling  
-- **JavaScript (Vanilla JS)** – Dynamic content & logic  
-- **html2pdf.js** – PDF generation  
+- Professional resume layout (MNC-style)
+- Live resume preview
+- One-click **single-page A4 PDF download**
+- Fresher and experienced candidate support
+- Auto-generated career objective (`You write`)
+- No backend or database required
+- Fully client-side and browser-based
+- Easy to customize and extend
 
 ---
 
-## 📁 Project Structure
+## Technologies Used
+
+- **HTML5** – Structure and form inputs
+- **CSS3** – Layout, styling, and A4 print optimization
+- **JavaScript (Vanilla)** – Resume generation logic
+- **html2pdf.js** – High-quality PDF generation
+
+---
+
+## Project Structure
 
 resume-generator/
 │
-├── index.html # Resume form & preview UI
-├── style.css # Resume design & layout
-├── script.js # Resume generation & PDF logic
+├── index.html # User interface and resume preview
+├── style.css # Professional styling and print layout
+├── script.js # Resume logic and PDF generation
 └── README.md # Project documentation
 
 yaml
@@ -40,35 +48,35 @@ Copy code
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
-1. Download or clone the repository:
+1. Clone or download the project:
    ```bash
    git clone https://github.com/your-username/resume-generator.git
 Open the project folder
 
-Open index.html in any modern web browser
-(Chrome / Edge / Firefox recommended)
+Open index.html in a modern web browser
+(Google Chrome or Microsoft Edge recommended)
 
-✅ No installation or server required.
+No installation, server, or build process required.
 
-📝 How to Use
-Fill in all required resume details
+Usage Instructions
+Enter all required resume details
 
-In Career Objective, type:
+In the Career Objective field, type:
 
 arduino
 Copy code
 You write
-→ A professional objective will be generated automatically
+A professional objective will be generated automatically
 
 Click Generate Resume
 
 Click Download PDF
 
-📄 Resume will download as a single-page A4 PDF
+The resume will be downloaded as a single-page A4 PDF.
 
-📄 Resume Sections Included
+Resume Sections Included
 Personal Details
 
 Career Objective
@@ -87,49 +95,13 @@ Achievements (Optional)
 
 Languages Known
 
-📦 External Library Used
-html2pdf.js
+PDF Generation Details
+The application ensures a single-page PDF output using:
 
-html
-Copy code
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-⚠️ Notes
-Click Generate Resume before Download PDF
+Fixed A4 dimensions (210mm × 297mm)
 
-Keep content concise to maintain single-page PDF
+Optimized font sizes and spacing
 
-Internet is required once to load the PDF library
+Disabled automatic page breaks
 
-🔮 Future Enhancements
-Multiple resume templates
-
-Dark mode
-
-ATS keyword analyzer
-
-Resume photo upload
-
-Local storage save option
-
-GitHub Pages deployment
-
-👨‍💻 Author
-Aravinth
-📧 Email: aravinth.saravinth2007@gmail.com
-🔗 LinkedIn: https://www.linkedin.com/in/aravinth-s-37770730b
-
-📜 License
-This project is open-source and free to use for learning, personal use, and portfolio projects.
-
-yaml
-Copy code
-
----
-
-If you want, I can also:
-- ✅ Add **GitHub badges**
-- ✅ Create **project screenshots section**
-- ✅ Write **project explanation for interviews**
-- ✅ Prepare **GitHub repo description**
-
-Just tell me 👍
+Custom html2pdf configuration
