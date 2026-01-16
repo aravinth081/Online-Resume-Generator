@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Professional Resume Generator</title>
+
+  <!-- PDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <!-- LEFT FORM PANEL -->
+  <div class="form-panel">
+    <h1>Resume Generator</h1>
+
+    <h3>Personal Details</h3>
+    <input id="name" placeholder="Full Name">
+    <input id="mobile" placeholder="Mobile Number">
+    <input id="email" placeholder="Professional Email">
+    <input id="location" placeholder="City, Country">
+    <input id="linkedin" placeholder="LinkedIn URL">
+    <input id="github" placeholder="GitHub / Portfolio">
+
+    <h3>Career Objective</h3>
+    <textarea id="objective" placeholder="Write objective or type 'You write'"></textarea>
+
+    <h3>Skills</h3>
+    <textarea id="techSkills" placeholder="Technical Skills"></textarea>
+    <textarea id="tools" placeholder="Tools / Technologies"></textarea>
+    <textarea id="softSkills" placeholder="Soft Skills"></textarea>
+
+    <h3>Experience / Internship</h3>
+    <input id="experienceType" placeholder="Fresher / Experienced">
+    <input id="jobTitle" placeholder="Job Title">
+    <input id="company" placeholder="Company Name">
+    <input id="duration" placeholder="Duration">
+    <textarea id="workDetails" placeholder="Work details (2–3 points)"></textarea>
+
+    <h3>Education</h3>
+    <input id="degree" placeholder="Degree & Branch">
+    <input id="college" placeholder="College Name">
+    <input id="year" placeholder="Year of Passing">
+    <input id="cgpa" placeholder="CGPA / Percentage">
+
+    <h3>Projects</h3>
+    <textarea id="projects" placeholder="Project Title – Tech – Description"></textarea>
+
+    <h3>Certifications</h3>
+    <textarea id="certifications" placeholder="Certification – Platform"></textarea>
+
+    <h3>Achievements</h3>
+    <textarea id="achievements" placeholder="Awards / Hackathons"></textarea>
+
+    <h3>Languages</h3>
+    <textarea id="languages" placeholder="English – Professional, Tamil – Native"></textarea>
+
+    <button onclick="generateResume()">Generate Resume</button>
+    <button class="pdf-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <!-- RIGHT RESUME PREVIEW -->
+  <div class="resume-panel" id="resume">
+    <p class="hint">Fill the form & click Generate Resume</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

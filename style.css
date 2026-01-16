@@ -1,0 +1,91 @@
+ * {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #eef3f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.page {
+  display: flex;
+  gap: 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.form-panel {
+  width: 40%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.resume-panel {
+  width: 60%;
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+}
+
+/* Resume formatting for PDF */
+.resume-panel h2 {
+  margin-bottom: 5px;
+  color: #0d47a1;
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.section h4 {
+  border-bottom: 1px solid #1976d2;
+  margin-bottom: 6px;
+  color: #1976d2;
+}
+
+.resume-panel p {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 60px;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button {
+  background: #1976d2;
+  color: white;
+}
+
+.pdf-btn {
+  background: #2e7d32;
+}
+
+.hint {
+  color: gray;
+  text-align: center;
+}
