@@ -43,8 +43,7 @@ resume-generator/
 ├── script.js # Resume logic and PDF generation
 └── README.md # Project documentation
 
-yaml
-Copy code
+
 
 ---
 
@@ -105,3 +104,4 @@ Optimized font sizes and spacing
 Disabled automatic page breaks
 
 Custom html2pdf configuration
+
