@@ -1,83 +1,77 @@
- function generateResume() {
+  const toggleBtn = document.getElementById("themeToggle");
+const pdfBtn = document.getElementById("pdfBtn");
 
-  let objectiveText = document.getElementById("objective").value;
-  if (objectiveText.toLowerCase() === "you write") {
-    objectiveText =
-      "Motivated graduate seeking an entry-level position to apply technical skills and grow with the organization.";
-  }
+/* THEME TOGGLE */
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggleBtn.textContent =
+    document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
 
-  document.getElementById("resume").innerHTML = `
-    <h2>${document.getElementById("name").value}</h2>
-    <p><b>${document.getElementById("mobile").value}</b> |
-       ${document.getElementById("email").value}</p>
-    <p>${document.getElementById("location").value}</p>
-    <p>${document.getElementById("linkedin").value} |
-       ${document.getElementById("github").value}</p>
+/* GENERATE RESUME */
+function generateResume() {
+  const resume = document.getElementById("resume");
 
-    <div class="section">
-      <h4>Career Objective</h4>
-      <p>${objectiveText}</p>
-    </div>
+  resume.innerHTML = `
+    <h2>${val("name")}</h2>
+    <p><b>${val("mobile")}</b> | ${val("email")}</p>
+    <p>${val("location")}</p>
+    <p>${val("linkedin")} | ${val("github")}</p>
 
-    <div class="section">
-      <h4>Skills</h4>
-      <p><b>Technical:</b> ${techSkills.value}</p>
-      <p><b>Tools:</b> ${tools.value}</p>
-      <p><b>Soft Skills:</b> ${softSkills.value}</p>
-    </div>
+    <div class="section-title">Career Objective</div>
+    <p>${val("objective")}</p>
 
-    <div class="section">
-      <h4>Experience</h4>
-      <p>${experienceType.value}</p>
-      <p>${jobTitle.value} – ${company.value}</p>
-      <p>${duration.value}</p>
-      <p>${workDetails.value}</p>
-    </div>
+    <div class="section-title">Skills</div>
+    <p>Technical: ${val("techSkills")}</p>
+    <p>Tools: ${val("tools")}</p>
+    <p>Soft Skills: ${val("softSkills")}</p>
 
-    <div class="section">
-      <h4>Education</h4>
-      <p>${degree.value}</p>
-      <p>${college.value}</p>
-      <p>${year.value} | ${cgpa.value}</p>
-    </div>
+    <div class="section-title">Experience</div>
+    <p>${val("experienceType")}</p>
+    <p>${val("jobTitle")} – ${val("company")}</p>
+    <p>${val("duration")}</p>
+    <p>${val("workDetails")}</p>
 
-    <div class="section">
-      <h4>Projects</h4>
-      <p>${projects.value}</p>
-    </div>
+    <div class="section-title">Education</div>
+    <p>${val("degree")}</p>
+    <p>${val("college")}</p>
+    <p>${val("year")} | ${val("cgpa")}</p>
 
-    <div class="section">
-      <h4>Certifications</h4>
-      <p>${certifications.value}</p>
-    </div>
+    <div class="section-title">Projects</div>
+    <p>${val("projects")}</p>
 
-    <div class="section">
-      <h4>Achievements</h4>
-      <p>${achievements.value}</p>
-    </div>
+    <div class="section-title">Certifications</div>
+    <p>${val("certifications")}</p>
 
-    <div class="section">
-      <h4>Languages</h4>
-      <p>${languages.value}</p>
-    </div>
+    <div class="section-title">Achievements</div>
+    <p>${val("achievements")}</p>
+
+    <div class="section-title">Languages</div>
+    <p>${val("languages")}</p>
   `;
+
+  pdfBtn.disabled = false;
 }
 
-function downloadPDF() {
-  const element = document.getElementById("resume");
+/* SAFE VALUE */
+function val(id) {
+  return document.getElementById(id).value || "";
+}
 
-  const options = {
+/* DOWNLOAD PDF */
+function downloadPDF() {
+  const resume = document.getElementById("resume");
+
+  if (!resume.innerText.trim()) {
+    alert("Generate resume first!");
+    return;
+  }
+
+  html2pdf().set({
     margin: 0,
     filename: "Resume.pdf",
     image: { type: "jpeg", quality: 1 },
-    html2canvas: { scale: 2, scrollY: 0 },
-    jsPDF: {
-      unit: "mm",
-      format: "a4",
-      orientation: "portrait"
-    },
-    pagebreak: { mode: ["avoid-all"] }
-  };
-
-  html2pdf().set(options).from(element).save();
+    html2canvas: { scale: 3 },
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+  }).from(resume).save();
 }
