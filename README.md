@@ -1,55 +1,51 @@
-  # Online Resume Generator
+  # Resume Generator (A4 PDF + Light/Dark Mode)
 
-A **professional, ATS-friendly online resume generator** built using **HTML, CSS, and JavaScript**.  
-This application allows users to create a clean, modern resume, preview it in real time, and **download it as a single-page A4 PDF**.
-
----
-
-## Overview
-
-The Online Resume Generator is a front-end web application designed for students, freshers, and professionals.  
-It follows modern resume standards used by MNCs and ensures compatibility with Applicant Tracking Systems (ATS).
+A **professional, ATS-friendly Resume Generator** built using **HTML, CSS, and JavaScript**.  
+It allows users to enter resume details, preview them in real time, toggle **Light/Dark mode**, and **download the resume as a full A4-size PDF** with content automatically fitted.
 
 ---
 
-## Features
+## ✨ Features
 
-- Professional resume layout (MNC-style)
-- Live resume preview
-- One-click **single-page A4 PDF download**
-- Fresher and experienced candidate support
-- Auto-generated career objective (`You write`)
-- No backend or database required
-- Fully client-side and browser-based
-- Easy to customize and extend
-
----
-
-## Technologies Used
-
-- **HTML5** – Structure and form inputs
-- **CSS3** – Layout, styling, and A4 print optimization
-- **JavaScript (Vanilla)** – Resume generation logic
-- **html2pdf.js** – High-quality PDF generation
+- ✅ Clean, professional resume layout
+- ✅ Live resume preview
+- ✅ **Full A4 (210 × 297 mm) PDF output**
+- ✅ Content automatically fits inside one A4 page
+- ✅ Light Mode 🌞 / Dark Mode 🌙 toggle
+- ✅ Small top-right theme toggle icon
+- ✅ Generate Resume & Download PDF buttons working correctly
+- ✅ No blank or empty PDF issues
+- ✅ Fully client-side (no backend required)
+- ✅ Fresher & Experienced resume support
 
 ---
 
-## Project Structure
+## 🛠️ Technologies Used
+
+- **HTML5** – Structure & form inputs  
+- **CSS3** – Layout, theming, and A4 sizing  
+- **JavaScript (Vanilla JS)** – Resume generation logic  
+- **html2pdf.js** – High-quality PDF generation  
+
+---
+
+## 📁 Project Structure
 
 resume-generator/
 │
-├── index.html # User interface and resume preview
-├── style.css # Professional styling and print layout
-├── script.js # Resume logic and PDF generation
-└── README.md # Project documentation
+├── index.html # Main UI (Form + Resume Preview)
+├── style.css # Styling, Light/Dark mode, A4 layout
+├── script.js # Resume logic, theme toggle, PDF export
+└── README.md # Documentation
 
-
+yaml
+Copy code
 
 ---
 
-## How to Run the Project
+## 🚀 How to Run the Project
 
-1. Clone or download the project:
+1. Download or clone the project:
    ```bash
    git clone https://github.com/your-username/resume-generator.git
 Open the project folder
@@ -57,25 +53,25 @@ Open the project folder
 Open index.html in a modern web browser
 (Google Chrome or Microsoft Edge recommended)
 
-No installation, server, or build process required.
+✔ No installation
+✔ No server required
 
-Usage Instructions
-Enter all required resume details
-
-In the Career Objective field, type:
-
-arduino
-Copy code
-You write
-A professional objective will be generated automatically
+📝 How to Use
+Fill in the resume form (Personal Details, Skills, Education, etc.)
 
 Click Generate Resume
 
+Resume preview appears on the right
+
+Download PDF button becomes enabled
+
 Click Download PDF
 
-The resume will be downloaded as a single-page A4 PDF.
+Resume downloads as a full A4-size PDF
 
-Resume Sections Included
+Use the 🌙 / ☀️ icon (top-right) to switch between Dark and Light mode
+
+📄 Resume Sections Included
 Personal Details
 
 Career Objective
@@ -88,20 +84,10 @@ Education
 
 Projects
 
-Certifications / Training
+Certifications
 
-Achievements (Optional)
+Achievements
 
-Languages Known
-
-PDF Generation Details
-The application ensures a single-page PDF output using:
-
-Fixed A4 dimensions (210mm × 297mm)
-
-Optimized font sizes and spacing
-
-Disabled automatic page breaks
-
-Custom html2pdf configuration
-
+Languages
+  
+  Generate as resume easily
