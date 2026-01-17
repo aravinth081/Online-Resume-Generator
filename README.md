@@ -1,4 +1,4 @@
-  # Resume Generator (A4 PDF + Light/Dark Mode)
+  # Resume Generator  
 
 A **professional, ATS-friendly Resume Generator** built using **HTML, CSS, and JavaScript**.  
 It allows users to enter resume details, preview them in real time, toggle **Light/Dark mode**, and **download the resume as a full A4-size PDF** with content automatically fitted.
@@ -91,3 +91,4 @@ Achievements
 Languages
   
   Generate as resume easily
+
